@@ -1,746 +1,821 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOME - SIDNOV INDONESIA</title>
+    <link rel="icon" type="image/x-icon" href="/public/assets/sidnov-icon.ico" />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HOME - SIDNOV INDONESIA</title>
-  <link rel="icon" type="image/x-icon" href="/public/assets/sidnov-icon.ico">
-  <link href="./output.css" rel="stylesheet">
-</head>
+  <body>
+    <!-- Main Navbar -->
+    <header class="w-full bg-white border-b border-gray-200">
+      <nav class="relative max-w-[85rem] w-full mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div class="grid grid-cols-3 items-center">
+          <!-- Left Section - Mobile Toggle & Desktop Search -->
+          <div class="flex items-center">
+            <!-- Mobile Toggle Button -->
+            <button type="button" class="md:hidden size-9 flex justify-center items-center text-gray-800" data-hs-overlay="#mobile-menu" aria-controls="mobile-menu" aria-label="Toggle navigation">
+              <svg class="size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
 
-<body>
-  <!-- Main Navbar -->
-  <header class="w-full bg-white border-b border-gray-200">
-    <nav class="relative max-w-[85rem] w-full mx-auto px-4 sm:px-6 lg:px-8 py-4">
-      <div class="grid grid-cols-3 items-center">
-        <!-- Left Section - Mobile Toggle & Desktop Search -->
-        <div class="flex items-center">
-          <!-- Mobile Toggle Button -->
-          <button type="button" class="md:hidden size-9 flex justify-center items-center text-gray-800"
-            data-hs-overlay="#mobile-menu" aria-controls="mobile-menu" aria-label="Toggle navigation">
-            <svg class="size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-
-          <!-- Desktop Search -->
-          <div class="hidden md:block w-64 max-w-xs">
-            <div class="relative">
-              <div class="absolute inset-y-0 start-0 flex items-center ps-3.5">
-                <svg class="size-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
+            <!-- Desktop Search -->
+            <div class="hidden md:block w-64 max-w-xs">
+              <div class="relative">
+                <div class="absolute inset-y-0 start-0 flex items-center ps-3.5">
+                  <svg class="size-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </div>
+                <input type="search" name="search" class="py-2 ps-10 pe-4 block w-full border-none text-sm focus:border focus:border-gray-400 focus:ring-gray-400" placeholder="Find your perfect bag" />
               </div>
-              <input type="search" name="search"
-                class="py-2 ps-10 pe-4 block w-full border-none text-sm focus:border focus:border-gray-400 focus:ring-gray-400"
-                placeholder="Find your perfect bag">
             </div>
+          </div>
+
+          <!-- Center Section - Logo -->
+          <div class="flex justify-center">
+            <a href="index.html" class="flex-none">
+              <img src="/public/assets/Sidnov-Logo.png" alt="Sidnov" class="h-20" />
+            </a>
+          </div>
+
+          <!-- Right Section - Menu, Auth & Cart  -->
+          <div class="flex items-center justify-end gap-6 relative">
+
+              <div class="group" id="name-trigger">
+                <div class="hidden md:flex items-center gap-1 cursor-pointer" >
+                  <div>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block h-6 w-6">
+                      <path
+                        d="M21.649 19.875c-1.428-2.468-3.628-4.239-6.196-5.078a6.75 6.75 0 10-6.906 0c-2.568.839-4.768 2.609-6.196 5.078a.75.75 0 101.299.75C5.416 17.573 8.538 15.75 12 15.75c3.462 0 6.584 1.823 8.35 4.875a.751.751 0 101.299-.75zM6.75 9a5.25 5.25 0 1110.5 0 5.25 5.25 0 01-10.5 0z"
+                        fill="#000"
+                        class="fill-grey-100"
+                      ></path>
+                    </svg>
+      
+                    <div class="bottom-name group-hover:block hidden w-[25px] h-[4px] bg-gray-800 absolute top-[23.5px]">
+                    </div>
+                  </div>
+    
+    
+
+                <span class="font-bold text-sm text-gray-700 capitalize cursor-pointer px-0.5" id="name-trigger">Hi, ali</span>
+
+                <div class="w-[300px] h-[335px] absolute bg-white z-20 top-[40px] -left-[50px] drop-shadow-lg rounded-2xl border-x-yellow-500 hidden group-hover:block  transition-all duration-200" id="name-dropdown">
+
+                  <div class="flex flex-col m-3 px-2 gap-5">
+
+                    <div class="flex gap-3 items-center pt-3 pb-3">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block size-5">
+                        <path
+                          d="M21.649 19.875c-1.428-2.468-3.628-4.239-6.196-5.078a6.75 6.75 0 10-6.906 0c-2.568.839-4.768 2.609-6.196 5.078a.75.75 0 101.299.75C5.416 17.573 8.538 15.75 12 15.75c3.462 0 6.584 1.823 8.35 4.875a.751.751 0 101.299-.75zM6.75 9a5.25 5.25 0 1110.5 0 5.25 5.25 0 01-10.5 0z"
+                          fill="#000"
+                          class="fill-grey-100"
+                        ></path>
+                      </svg>
+                      <a href="#" class="text-sm px-1 hover:underline">Rincian</a>
+                    </div>
+
+                    <div class="flex gap-3 items-center pb-3">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block size-5">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M10.846 19.248a6.902 6.902 0 100-13.804 6.902 6.902 0 000 13.804zm.725-3.352v.887h-1.294v-.906a2.426 2.426 0 01-1.243-.69 2.479 2.479 0 01-.653-1.206l1.114-.665c.058.2.129.382.212.547.083.164.183.315.3.453.118.138.258.244.422.32.164.075.343.113.536.113.3 0 .537-.075.71-.226.172-.152.259-.383.259-.695a.62.62 0 00-.171-.426 1.493 1.493 0 00-.446-.327 11.356 11.356 0 00-.606-.28 7.697 7.697 0 01-.662-.326 3.792 3.792 0 01-.606-.411 1.7 1.7 0 01-.446-.591 1.886 1.886 0 01-.17-.815c0-.443.132-.833.398-1.17a1.927 1.927 0 011.052-.677V7.91h1.294v.916c.65.174 1.124.571 1.424 1.192l-1.113.674c-.142-.26-.294-.448-.458-.566a.953.953 0 00-.573-.177.729.729 0 00-.507.182.596.596 0 00-.202.463c0 .131.036.252.109.362.072.11.17.207.292.293.123.085.264.167.422.246.16.079.326.158.5.236.174.08.349.162.523.25.174.086.341.187.5.302.159.115.3.24.422.374.122.135.22.296.292.485.073.189.11.395.11.618 0 .578-.155 1.052-.464 1.421-.31.37-.735.608-1.277.716z"
+                          fill="#FAB005"
+                        ></path>
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M0 12.256C0 6.311 5.04 1.5 11.248 1.5c3.986 0 7.615 2.001 9.638 5.209a.964.964 0 01-.33 1.345c-.472.283-1.09.14-1.38-.32-1.659-2.633-4.642-4.278-7.928-4.278-5.11 0-9.242 3.945-9.242 8.8 0 4.856 4.133 8.8 9.242 8.8 3.633 0 6.85-2.013 8.351-5.025l-1.437-.147a.197.197 0 01-.136-.317l3.104-4.021a.197.197 0 01.334.035l2.18 4.563a.197.197 0 01-.199.281l-1.749-.18c-1.681 4.032-5.788 6.768-10.449 6.768C5.04 23.013 0 18.2 0 12.256z"
+                          fill="#127DB9"
+                        ></path>
+                      </svg>
+                      <span class="text-sm px-1 hover:underline">Cashback</span>
+                      <span class="flex-1 text-end text-sm font-bold">Rp 20.000</span>
+                    </div>
+
+                    <div class="flex gap-3 items-center pb-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="inline-block size-5">
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                        />
+                      </svg>
+                      <span class="text-sm px-1 hover:underline">Wishlist</span>
+                    </div>
+
+                    <div class="flex gap-3 items-center pb-3">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block size-5">
+                        <path
+                          d="M20.97 6.202l-8.25-4.514a1.489 1.489 0 00-1.44 0L3.03 6.202a1.5 1.5 0 00-.78 1.313v8.966a1.5 1.5 0 00.78 1.313l8.25 4.516a1.489 1.489 0 001.44 0l8.25-4.516a1.5 1.5 0 00.78-1.313V7.517a1.5 1.5 0 00-.78-1.315zM12 3l7.532 4.125-2.791 1.528-7.533-4.125L12 3zm0 8.25L4.468 7.125l3.178-1.74 7.532 4.125L12 11.25zM3.75 8.437l7.5 4.105v8.043l-7.5-4.102V8.437zm16.5 8.042l-7.5 4.106v-8.04l3-1.64v3.345a.75.75 0 101.5 0v-4.167l3-1.646v8.042z"
+                          fill="#000"
+                        ></path>
+                      </svg>
+                      <span class="text-sm px-1 hover:underline">Pesanan</span>
+                    </div>
+
+                    <div class="flex gap-3 items-center pb-3">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block size-5">
+                        <path
+                          d="M22.425 9.12a1.5 1.5 0 00-1.295-1.03l-5.568-.48-2.182-5.19a1.495 1.495 0 00-2.76 0L8.444 7.61l-5.574.482a1.5 1.5 0 00-.854 2.631l4.229 3.696-1.268 5.488a1.5 1.5 0 002.235 1.625l4.781-2.906 4.792 2.906a1.5 1.5 0 002.235-1.625l-1.267-5.494 4.229-3.69a1.5 1.5 0 00.443-1.602zm-1.427.47l-4.228 3.69a1.5 1.5 0 00-.476 1.473l1.27 5.497-4.788-2.906a1.49 1.49 0 00-1.55 0L6.444 20.25l1.262-5.494a1.5 1.5 0 00-.476-1.473L3 9.595v-.008l5.572-.482a1.5 1.5 0 001.252-.914L12 3.007l2.175 5.184a1.501 1.501 0 001.252.914L21 9.587v.006l-.002-.003z"
+                          fill="#000"
+                        ></path>
+                      </svg>
+                      <span class="text-sm px-1 hover:underline">Ulasan</span>
+                    </div>
+
+                    <div class="flex gap-3 items-center">
+                      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block size-5">
+                        <path
+                          d="M10.5 20.25a.75.75 0 01-.75.75H4.5A1.5 1.5 0 013 19.5v-15A1.5 1.5 0 014.5 3h5.25a.75.75 0 110 1.5H4.5v15h5.25a.75.75 0 01.75.75zm10.28-8.78l-3.75-3.75a.75.75 0 10-1.06 1.06l2.47 2.47H9.75a.75.75 0 100 1.5h8.69l-2.47 2.47a.75.75 0 101.06 1.06l3.75-3.75a.747.747 0 000-1.06z"
+                          fill="#000"
+                        ></path>
+                      </svg>
+                      <span class="text-sm px-1 hover:underline">Keluar</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="hidden md:flex items-center gap-2">
+              <a href="pages/signin.html" class="text-sm text-gray-800">Sign in</a>
+              <span class="text-gray-300">/</span>
+              <a href="pages/signup.html" class="text-sm text-gray-500">Sign up</a>
+            </div>
+
+            <a href="#" class="flex items-center gap-1 text-sm">
+              <span class="hidden md:inline-block">Cart</span>
+              <span>(2)</span>
+              <span class="icon-[solar--cart-5-linear] w-6 h-6"></span>
+            </a>
           </div>
         </div>
+      </nav>
 
-        <!-- Center Section - Logo -->
-        <div class="flex justify-center">
-          <a href="index.html" class="flex-none">
-            <img src="/public/assets/Sidnov-Logo.png" alt="Sidnov" class="h-20">
-          </a>
-        </div>
-
-        <!-- Right Section - Auth & Cart -->
-        <div class="flex items-center justify-end gap-4">
-          <div class="hidden md:flex items-center gap-2">
-            <a href="pages/signin.html" class="text-sm text-gray-800">Sign in</a>
-            <span class="text-gray-300">/</span>
-            <a href="pages/signup.html" class="text-sm text-gray-500">Sign up</a>
-          </div>
-          <a href="#" class="flex items-center gap-1 text-sm">
-            <span class="hidden md:inline-block">Cart</span>
-            <span>(2)</span>
-            <span class="icon-[solar--cart-5-linear] w-6 h-6"></span>
-          </a>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Secondary Navigation (Desktop) -->
-    <nav class="hidden md:block bg-white shadow-md border-t">
-      <div class="max-w-[85rem] mx-auto px-4">
-        <div class="flex justify-center gap-10 py-3">
-          <a href="index.html" class="font-bold text-sm text-gray-800 underline">HOME</a>
-          <a href="pages/shop.html" class="font-medium text-sm text-gray-800 hover:underline">SHOP</a>
-          <a href="pages/stories.html" class="font-medium text-sm text-gray-800 hover:underline">STORIES</a>
-          <a href="#" class="font-medium text-sm text-gray-800 hover:underline">ABOUT</a>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu"
-      class="hs-overlay hs-overlay-open:translate-x-0 -translate-x-full fixed top-0 start-0 transition-all duration-300 transform h-full max-w-xs w-full z-[60] bg-white border-e hidden"
-      tabindex="-1">
-      <div class="flex justify-between items-center py-3 px-4 border-b">
-        <h3 class="font-bold text-gray-800">SIDNOV INDONESIA</h3>
-        <button type="button"
-          class="flex justify-center items-center size-9 text-sm font-semibold rounded-lg border border-gray-200 text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none"
-          data-hs-overlay="#mobile-menu">
-          <span class="sr-only">Close modal</span>
-          <svg class="size-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
-
-      <div class="p-4">
-        <!-- Mobile Search -->
-        <div class="relative mb-4">
-          <div class="absolute inset-y-0 start-0 flex items-center ps-3.5">
-            <svg class="size-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-          </div>
-          <input type="search" name="search"
-            class="py-2 ps-10 pe-4 block w-full border border-gray-200 text-sm focus:border-gray-500 focus:ring-gray-500"
-            placeholder="Find your perfect bag..">
-        </div>
-
-        <!-- Mobile Nav Links -->
-        <div class="space-y-2">
-          <a href="index.html" class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">HOME</a>
-          <a href="pages/shop.html" class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">SHOP</a>
-          <a href="pages/stories.html" class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">STORIES</a>
-          <a href="#" class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">ABOUT</a>
-        </div>
-
-        <!-- Mobile Auth -->
-        <div class="flex items-center gap-2 pt-4 mt-4 border-t border-gray-200">
-          <a href="/src/pages/signin.html" class="text-sm text-gray-800">Sign in</a>
-          <span class="text-gray-300">/</span>
-          <a href="/src/pages/signup.html" class="text-sm text-gray-500">Sign up</a>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- HERO SECTION -->
-  <section>
-    <div class="container mx-auto lg:px-12 px-4 pt-8 lg:h-screen">
-      <div class="grid grid-cols-12 justify-center items-center gap-5">
-        <!-- Laptop Bag -->
-        <div class="col-span-12 lg:col-span-7 relative group">
-          <img src="../public/assets/laptop_bag.webp" alt="Laptop Bag" class="object-cover w-full h-full">
-          <div
-            class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex gap-4 flex-col items-center justify-center text-white p-4">
-            <h2 class="text-x md:text-3xl font-title">Laptop Bags</h2>
-            <p class="text-xs lg:text-base text-center lg:w-9/12">Style Meets Functionality! Stay stylish and organized with our exclusive laptop bags, crafted for durability and elegance.
-            </p>
-            <button
-              class="px-8 py-2 border border-white text-white hover:bg-white hover:text-black transition">Explore Collection</button>
+      <!-- Secondary Navigation (Desktop) -->
+      <nav class="hidden md:block bg-white shadow-md border-t">
+        <div class="max-w-[85rem] mx-auto px-4">
+          <div class="flex justify-center gap-10 py-3">
+            <a href="index.html" class="font-bold text-sm text-gray-800 underline">HOME</a>
+            <a href="pages/shop.html" class="font-medium text-sm text-gray-800 hover:underline">SHOP</a>
+            <a href="pages/stories.html" class="font-medium text-sm text-gray-800 hover:underline">STORIES</a>
+            <a href="#" class="font-medium text-sm text-gray-800 hover:underline">ABOUT</a>
           </div>
         </div>
-        <!-- Square Bags -->
-        <div class="col-span-12 lg:col-span-5 flex flex-col md:flex-row lg:flex-col gap-5">
-          <div class="relative group w-full md:w-1/2 lg:w-full">
-            <img src="../public/assets/tote_bag.webp" alt="Square Bag" class="object-cover w-full h-full">
-            <div
-              class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex gap-4 flex-col items-center justify-center text-white p-4">
-              <h2 class="text-xl md:text-3xl font-title">Tote Bags</h2>
-              <p class="text-xs lg:text-base text-center lg:w-9/12">Compact & Practical! Sleek, lightweight, and versatile—your perfect everyday companion.
-              </p>
-              <button
-                class="px-8 py-2 border border-white text-white hover:bg-white hover:text-black transition">Explore Collection</button>
-            </div>
-          </div>
-          <div class="relative group w-full md:w-1/2 lg:w-full">
-            <img src="../public/assets/square_bag.webp" alt="Tote Bag" class="object-cover w-full h-full">
-            <div
-              class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex gap-4 flex-col items-center justify-center text-white p-4">
-              <h2 class="text-xl md:text-3xl font-title">Square Bags</h2>
-              <p class="text-xs lg:text-base text-center lg:w-9/12">Stylish & Spacious! Chic, comfortable, and designed for any occasion.
-              </p>
-              <button
-                class="px-8 py-2 border border-white text-white hover:bg-white hover:text-black transition">Explore Collection</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- HERO SECTION END -->
+      </nav>
 
-  <!-- NEW PRODUCT SECTION -->
-  <section>
-    <div class="container mx-auto lg:px-12 px-4 mt-24 md:mt-12 pb-28">
-      <div class="flex flex-col gap-10 lg:gap-16">
-        <div class="title flex gap-y-4 flex-col md:flex-row justify-between items-center w-full">
-          <h1 class="text-2xl md:text-4xl font-extrabold">New Arrivals – Fresh & Exclusive!</h1>
-          <div
-            class="flex flex-wrap text-xs lg:text-lg text-gray-500 font-medium gap-6 lg:gap-12 justify-center gap-y-4 cursor-pointer">
-            <span class="text-gray-800 underline" data-filter="all">All</span>
-            <span data-filter=".square_bag">Square Bag</span>
-            <span data-filter=".tote_bag">Tote Bag</span>
-            <span data-filter=".laptop_bag">Laptop Bag</span>
-            <span data-filter=".accessories">Accessories</span>
-          </div>
-        </div>
-
-        <div class="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-5 gap-y-12 xl:gap-x-8"
-          id="product_container">
-          <div class="group relative overflow-hidden rounded-md product-card square_bag">
-            <div class="w-full aspect-square bg-gray-200 rounded-md overflow-hidden">
-              <img src="../public/assets/new_product_1.webp" alt="Front of men's Basic Tee in black."
-                class="object-cover w-full h-full transition duration-500 transform group-hover:scale-[1.2]">
-            </div>
-            <div class="mt-6 flex gap-6 flex-col justify-between">
-              <div>
-                <h3 class="text-xs md:text-lg lg:text-2xl font-extrabold text-gray-800">
-                  <a href="#" class="line-clamp-2 group-hover:line-clamp-none">
-                    <span aria-hidden="true" class="absolute inset-0"></span>
-                    Square Bag - "Floral Breeze" Edition
-                  </a>
-                </h3>
-                <p class="mt-2 text-base md:text-lg font-semibold text-gray-800">Rp 245.000</p>
-              </div>
-              <div class="group-btn flex gap-2 md:gap-4 transition duration-500">
-                <a href="#"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-emerald-400">
-                  <span class="icon-[solar--bag-4-outline] text-3xl"></span>
-                </a>
-                <a href="/src/pages/detail-product.html"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-sky-400">
-                  <span class="icon-[solar--eye-outline] text-3xl"></span>
-                </a>
-                <a href="#"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-red-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-red-400">
-                  <span class="icon-[solar--heart-outline] text-3xl"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="group relative overflow-hidden rounded-md product-card square_bag">
-            <div class="w-full aspect-square bg-gray-200 rounded-md overflow-hidden">
-              <img src="../public/assets/new_product_5.webp" alt="Front of men's Basic Tee in black."
-                class="object-cover w-full h-full transition duration-500 transform group-hover:scale-[1.2]">
-            </div>
-            <div class="mt-6 flex gap-6 flex-col justify-between">
-              <div>
-                <h3 class="text-xs md:text-lg lg:text-2xl font-extrabold text-gray-800">
-                  <a href="#" class="line-clamp-2 group-hover:line-clamp-none">
-                    <span aria-hidden="true" class="absolute inset-0"></span>
-                    Square Bag - "Abstract Harmony" Pattern
-                  </a>
-                </h3>
-                <p class="mt-2 text-base md:text-lg font-semibold text-gray-800">Rp 280.000</p>
-              </div>
-              <div class="group-btn flex gap-2 md:gap-4 transition duration-500">
-                <a href="#"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-emerald-400">
-                  <span class="icon-[solar--bag-4-outline] text-3xl"></span>
-                </a>
-                <a href="/src/pages/detail-product.html"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-sky-400">
-                  <span class="icon-[solar--eye-outline] text-3xl"></span>
-                </a>
-                <a href="#"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-red-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-red-400">
-                  <span class="icon-[solar--heart-outline] text-3xl"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="group relative overflow-hidden rounded-md product-card laptop_bag">
-            <div class="w-full aspect-square bg-gray-200 rounded-md overflow-hidden">
-              <img src="../public/assets/new_product_3.webp" alt="Front of men's Basic Tee in black."
-                class="object-cover w-full h-full transition duration-500 transform group-hover:scale-[1.2]">
-            </div>
-            <div class="mt-6 flex gap-6 flex-col justify-between">
-              <div>
-                <h3 class="text-xs md:text-lg lg:text-2xl font-extrabold text-gray-800">
-                  <a href="#" class="line-clamp-2 group-hover:line-clamp-none">
-                    <span aria-hidden="true" class="absolute inset-0"></span>
-                    Laptop Bag - "Orca whale" Pattern
-                  </a>
-                </h3>
-                <p class="mt-2 text-base md:text-lg font-semibold text-gray-800">Rp 250.000</p>
-              </div>
-              <div class="group-btn flex gap-2 md:gap-4 transition duration-500">
-                <a href="#"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-emerald-400">
-                  <span class="icon-[solar--bag-4-outline] text-3xl"></span>
-                </a>
-                <a href="/src/pages/detail-product.html"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-sky-400">
-                  <span class="icon-[solar--eye-outline] text-3xl"></span>
-                </a>
-                <a href="#"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-red-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-red-400">
-                  <span class="icon-[solar--heart-outline] text-3xl"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="group relative overflow-hidden rounded-md product-card laptop_bag">
-            <div class="w-full aspect-square bg-gray-200 rounded-md overflow-hidden">
-              <img src="../public/assets/new_product_7.webp" alt="Front of men's Basic Tee in black."
-                class="object-cover w-full h-full transition duration-500 transform group-hover:scale-[1.2]">
-            </div>
-            <div class="mt-6 flex gap-6 flex-col justify-between">
-              <div>
-                <h3 class="text-xs md:text-lg lg:text-2xl font-extrabold text-gray-800">
-                  <a href="#" class="line-clamp-2 group-hover:line-clamp-none">
-                    <span aria-hidden="true" class="absolute inset-0"></span>
-                    Laptop Bag - "Elegant Noir" Pattern
-                  </a>
-                </h3>
-                <p class="mt-2 text-base md:text-lg font-semibold text-gray-800">Rp 265.000</p>
-              </div>
-              <div class="group-btn flex gap-2 md:gap-4 transition duration-500">
-                <a href="#"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-emerald-400">
-                  <span class="icon-[solar--bag-4-outline] text-3xl"></span>
-                </a>
-                <a href="/src/pages/detail-product.html"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-sky-400">
-                  <span class="icon-[solar--eye-outline] text-3xl"></span>
-                </a>
-                <a href="#"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-red-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-red-400">
-                  <span class="icon-[solar--heart-outline] text-3xl"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="group relative overflow-hidden rounded-md product-card accessories">
-            <div class="w-full aspect-square bg-gray-200 rounded-md overflow-hidden">
-              <img src="../public/assets/new_product_4.webp" alt="Front of men's Basic Tee in black."
-                class="object-cover w-full h-full transition duration-500 transform group-hover:scale-[1.2]">
-            </div>
-            <div class="mt-6 flex gap-6 flex-col justify-between">
-              <div>
-                <h3 class="text-xs md:text-lg lg:text-2xl font-extrabold text-gray-800">
-                  <a href="#" class="line-clamp-2 group-hover:line-clamp-none">
-                    <span aria-hidden="true" class="absolute inset-0"></span>
-                    SIDNOV Charm Bag - "Geometric Sunset Glow" Edition
-                  </a>
-                </h3>
-                <p class="mt-2 text-base md:text-lg font-semibold text-gray-800">Rp 230.000</p>
-              </div>
-              <div class="group-btn flex gap-2 md:gap-4 transition duration-500">
-                <a href="#"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-emerald-400">
-                  <span class="icon-[solar--bag-4-outline] text-3xl"></span>
-                </a>
-                <a href="/src/pages/detail-product.html"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-sky-400">
-                  <span class="icon-[solar--eye-outline] text-3xl"></span>
-                </a>
-                <a href="#"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-red-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-red-400">
-                  <span class="icon-[solar--heart-outline] text-3xl"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="group relative overflow-hidden rounded-md product-card tote_bag">
-            <div class="w-full aspect-square bg-gray-200 rounded-md overflow-hidden">
-              <img src="../public/assets/new_product_6.webp" alt="Front of men's Basic Tee in black."
-                class="object-cover w-full h-full transition duration-500 transform group-hover:scale-[1.2]">
-            </div>
-            <div class="mt-6 flex gap-6 flex-col justify-between">
-              <div>
-                <h3 class="text-xs md:text-lg lg:text-2xl font-extrabold text-gray-800">
-                  <a href="#" class="line-clamp-2 group-hover:line-clamp-none">
-                    <span aria-hidden="true" class="absolute inset-0"></span>
-                    Tote Bag - "Nature Vibes"
-                  </a>
-                </h3>
-                <p class="mt-2 text-base md:text-lg font-semibold text-gray-800">Rp 215.000</p>
-              </div>
-              <div class="group-btn flex gap-2 md:gap-4 transition duration-500">
-                <a href="#"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-emerald-400">
-                  <span class="icon-[solar--bag-4-outline] text-3xl"></span>
-                </a>
-                <a href="/src/pages/detail-product.html"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-sky-400">
-                  <span class="icon-[solar--eye-outline] text-3xl"></span>
-                </a>
-                <a href="#"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-red-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-red-400">
-                  <span class="icon-[solar--heart-outline] text-3xl"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="group relative overflow-hidden rounded-md product-card tote_bag">
-            <div class="w-full aspect-square bg-gray-200 rounded-md overflow-hidden">
-              <img src="../public/assets/new_product_2.webp" alt="Front of men's Basic Tee in black."
-                class="object-cover w-full h-full transition duration-500 transform group-hover:scale-[1.2]">
-            </div>
-            <div class="mt-6 flex gap-6 flex-col justify-between">
-              <div>
-                <h3 class="text-xs md:text-lg lg:text-2xl font-extrabold text-gray-800">
-                  <a href="#" class="line-clamp-2 group-hover:line-clamp-none">
-                    <span aria-hidden="true" class="absolute inset-0"></span>
-                    Tote Bag - "Geometric Bliss" Design
-                  </a>
-                </h3>
-                <p class="mt-2 text-base md:text-lg font-semibold text-gray-800">Rp 210.000</p>
-              </div>
-              <div class="group-btn flex gap-2 md:gap-4 transition duration-500">
-                <a href="#"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-emerald-400">
-                  <span class="icon-[solar--bag-4-outline] text-3xl"></span>
-                </a>
-                <a href="/src/pages/detail-product.html"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-sky-400">
-                  <span class="icon-[solar--eye-outline] text-3xl"></span>
-                </a>
-                <a href="#"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-red-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-red-400">
-                  <span class="icon-[solar--heart-outline] text-3xl"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="group relative overflow-hidden rounded-md product-card accessories">
-            <div class="w-full aspect-square bg-gray-200 rounded-md overflow-hidden">
-              <img src="../public/assets/new_product_8.webp" alt="Front of men's Basic Tee in black."
-                class="object-cover w-full h-full transition duration-500 transform group-hover:scale-[1.2]">
-            </div>
-            <div class="mt-6 flex gap-6 flex-col justify-between">
-              <div>
-                <h3 class="text-xs md:text-lg lg:text-2xl font-extrabold text-gray-800">
-                  <a href="#" class="line-clamp-2 group-hover:line-clamp-none">
-                    <span aria-hidden="true" class="absolute inset-0"></span>
-                    SIDNOV Charm Bag V2 - "Geometric Sunset Glow" Edition
-                  </a>
-                </h3>
-                <p class="mt-2 text-base md:text-lg font-semibold text-gray-800">Rp 249.000</p>
-              </div>
-              <div class="group-btn flex gap-2 md:gap-4 transition duration-500">
-                <a href="#"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-emerald-400">
-                  <span class="icon-[solar--bag-4-outline] text-3xl"></span>
-                </a>
-                <a href="/src/pages/detail-product.html"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-sky-400">
-                  <span class="icon-[solar--eye-outline] text-3xl"></span>
-                </a>
-                <a href="#"
-                  class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-red-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-red-400">
-                  <span class="icon-[solar--heart-outline] text-3xl"></span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- NEW PRODUCT SECTION END-->
-
-  <!-- Banner Carousel -->
-  <div id="banner-carousel" class="relative h-[380px] w-full overflow-hidden">
-    <!-- Carousel Images -->
-    <div class="carousel-images relative h-full w-full">
-      <div class="carousel-item absolute inset-0 transition-opacity duration-500 ease-in-out opacity-100"
-        data-index="0">
-        <img src="../public/assets/banner_slider_1.webp" class="w-full h-full object-cover" alt="Banner Slide 1" />
-        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <div
-            class="text-center text-white px-4 sm:px-6 md:px-8 lg:px-12 w-9/12 lg:w-1/2 flex flex-col gap-4 items-center">
-            <h5 class="text-base sm:text-lg md:text-xl lg:text-4xl mb-2 font-title leading-relaxed">Special Offer for Chinese
-              New Year Edition</h5>
-            <p class="text-xs sm:text-sm md:text-base lg:text-lg">Get your favorite bag at a special discount, only for a limited time!
-              👜 Limited-edition cultural designs!
-              🎁 Exclusive deals on selected items!
-              🚀 Fast & secure shipping!</p>
-            <button
-              class="px-8 py-2 border border-white text-white hover:bg-white hover:text-black transition w-max">Buy
-              Now</button>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0" data-index="1">
-        <img src="../public/assets/banner_slider_2.webp" class="w-full h-full object-cover" alt="Banner Slide 2" />
-        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <div
-            class="text-center text-white px-4 sm:px-6 md:px-8 lg:px-12 w-9/12 lg:w-1/2 flex flex-col gap-4 items-center">
-            <h5 class="text-base sm:text-lg md:text-xl lg:text-4xl mb-2 font-title leading-relaxed">Limited-Time New Year Offer!</h5>
-            <p class="text-xs sm:text-sm md:text-base lg:text-lg">Get your hands on our best-selling bags before they’re gone!
-              👜 Handmade cultural-inspired bags
-              🔥 Exclusive festive discounts – while stocks last!
-              🚀 Fast shipping – Get yours before the celebration begins!
-              🎯 Hurry, once they're gone, they're gone!</p>
-            <button
-              class="px-8 py-2 border border-white text-white hover:bg-white hover:text-black transition w-max">Buy
-              Now</button>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0" data-index="2">
-        <img src="../public/assets/banner_slider_3.webp" class="w-full h-full object-cover" alt="Banner Slide 3" />
-        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <div
-            class="text-center text-white px-4 sm:px-6 md:px-8 lg:px-12 w-9/12 lg:w-1/2 flex flex-col gap-4 items-center">
-            <h5 class="text-base sm:text-lg md:text-xl lg:text-4xl mb-2 font-title leading-relaxed">Lunar New Year Special – Celebrate in Style!</h5>
-            <p class="text-xs sm:text-sm md:text-base lg:text-lg">Ring in the new year with an exclusive collection of beautifully handcrafted bags!
-              ✨ Limited-edition festive designs
-              💰 Special discounts on selected items
-              📦 Fast & secure delivery to your doorstep</p>
-            <button
-              class="px-8 py-2 border border-white text-white hover:bg-white hover:text-black transition w-max">Buy
-              Now</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Carousel Indicators -->
-    <div class="absolute bottom-0 left-0 right-0 z-10 flex justify-center pb-4 space-x-2">
-      <button class="carousel-indicator h-1 rounded-full bg-white/50 transition-all duration-300 ease-in-out"
-        data-index="0" style="width: 30px;"></button>
-      <button class="carousel-indicator h-1 rounded-full bg-white/50 transition-all duration-300 ease-in-out"
-        data-index="1" style="width: 10px;"></button>
-      <button class="carousel-indicator h-1 rounded-full bg-white/50 transition-all duration-300 ease-in-out"
-        data-index="2" style="width: 10px;"></button>
-    </div>
-
-    <!-- Carousel Controls -->
-    <button id="prev-slide"
-      class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/20 hover:bg-white/40 p-2 rounded-full transition">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white"
-        class="w-6 h-6">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-      </svg>
-    </button>
-    <button id="next-slide"
-      class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/20 hover:bg-white/40 p-2 rounded-full transition">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white"
-        class="w-6 h-6">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-      </svg>
-    </button>
-  </div>
-
-  <!-- ABOUT -->
-  <section>
-    <div class="container mx-auto lg:px-12 px-4 mt-24 md:mt-12 pt-20 pb-28">
-      <div class="flex flex-col lg:grid lg:grid-cols-12 gap-x-10 gap-y-6 items-center">
-        <div class="w-full h-full lg:col-span-5">
-          <img src="../public/assets/about-home-img.png" alt="about-sidnov" class="object-cover w-full h-full">
-        </div>
-        <div class="w-full flex flex-col gap-4 lg:col-span-7 text-center lg:text-left">
-          <h1 class="text-2xl md:text-[40px] text-gray-800 font-extrabold leading-normal">
-            #sidnovindonesia<br>UNIQUE FASHIONABLE
-          </h1>
-          <p class="text-sm md:text-xl text-gray-800 font-normal">
-            We bring you high-quality handmade bags inspired by Indonesian culture with a modern twist. Premium materials & eco-friendly craftsmanship, exclusive ethnic patterns, 🇮🇩 locally made with international appeal
-          </p>
+      <!-- Mobile Menu Overlay -->
+      <div id="mobile-menu" class="hs-overlay hs-overlay-open:translate-x-0 -translate-x-full fixed top-0 start-0 transition-all duration-300 transform h-full max-w-xs w-full z-[60] bg-white border-e hidden" tabindex="-1">
+        <div class="flex justify-between items-center py-3 px-4 border-b">
+          <h3 class="font-bold text-gray-800">SIDNOV INDONESIA</h3>
           <button
-            class="px-8 py-2 border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition w-max mx-auto lg:mx-0">
-            Read Our Story
+            type="button"
+            class="flex justify-center items-center size-9 text-sm font-semibold rounded-lg border border-gray-200 text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none"
+            data-hs-overlay="#mobile-menu"
+          >
+            <span class="sr-only">Close modal</span>
+            <svg class="size-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
           </button>
         </div>
-      </div>
-    </div>
-  </section>
-  <!-- ABOUT END -->
 
-  <!-- FOOTER -->
-  <footer class="w-full bg-white border-gray-300 py-10">
-    <!-- Social Media Icons -->
-    <div class="text-center border-t border-b border-gray-300 py-6">
-      <h3 class="text-lg font-semibold text-gray-800">Follow Us</h3>
-      <div class="flex justify-center space-x-4 mt-4">
-        <a href="#"
-          class="relative w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 overflow-hidden group">
-          <span
-            class="absolute inset-0 bg-gradient-to-bl from-[#AE16D0] to-[#FEA91A] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-          <svg class="relative z-10 text-gray-500 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" width="24"
-            height="24" viewBox="0 0 24 24">
-            <path fill="currentColor"
-              d="M12 7.9a4.1 4.1 0 1 0 4.1 4.1A4.09 4.09 0 0 0 12 7.9m0 6.77A2.67 2.67 0 1 1 14.67 12A2.67 2.67 0 0 1 12 14.67m5.23-6.94a1 1 0 1 1-1-1a1 1 0 0 1 1 1m2.71 1a4.7 4.7 0 0 0-1.29-3.35a4.7 4.7 0 0 0-3.35-1.32C14 4 10 4 8.7 4.06a4.73 4.73 0 0 0-3.35 1.29A4.7 4.7 0 0 0 4.06 8.7C4 10 4 14 4.06 15.3a4.7 4.7 0 0 0 1.29 3.35a4.73 4.73 0 0 0 3.35 1.29c1.32.08 5.28.08 6.6 0a4.7 4.7 0 0 0 3.35-1.29a4.7 4.7 0 0 0 1.29-3.35c.06-1.3.06-5.3 0-6.6Zm-1.7 8a2.7 2.7 0 0 1-1.52 1.52a18 18 0 0 1-4.72.32a18 18 0 0 1-4.71-.32a2.7 2.7 0 0 1-1.52-1.52c-.42-1.06-.33-3.56-.33-4.72s-.09-3.67.33-4.72a2.65 2.65 0 0 1 1.52-1.53A18 18 0 0 1 12 5.44a18 18 0 0 1 4.72.32a2.7 2.7 0 0 1 1.52 1.52c.42 1.06.32 3.56.32 4.72s.1 3.67-.32 4.72Z" />
-          </svg>
-        </a>
-        <a href="#"
-          class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-900 group transition duration-500">
-          <svg class="text-gray-500 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-            viewBox="0 0 24 24">
-            <path fill="currentColor"
-              d="M19 10.56a6.57 6.57 0 0 1-3.838-1.229v5.588a5.082 5.082 0 1 1-4.38-5.035v2.81a2.33 2.33 0 1 0 1.63 2.225V4h2.75q-.002.35.06.694A3.82 3.82 0 0 0 16.906 7.2c.621.41 1.35.629 2.094.628z" />
-          </svg>
-        </a>
-        <a href="#"
-          class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 hover:bg-red-600 group transition duration-500">
-          <svg class="text-gray-500 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-            viewBox="0 0 24 24">
-            <g fill="none" stroke="currentColor" stroke-width="1.5">
-              <path fill="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m14 12l-3.5 2v-4z" />
-              <path
-                d="M2 12.708v-1.416c0-2.895 0-4.343.905-5.274c.906-.932 2.332-.972 5.183-1.053C9.438 4.927 10.818 4.9 12 4.9s2.561.027 3.912.065c2.851.081 4.277.121 5.182 1.053S22 8.398 22 11.292v1.415c0 2.896 0 4.343-.905 5.275c-.906.931-2.331.972-5.183 1.052c-1.35.039-2.73.066-3.912.066s-2.561-.027-3.912-.066c-2.851-.08-4.277-.12-5.183-1.052S2 15.602 2 12.708Z" />
-            </g>
-          </svg>
-        </a>
-        <a href="#"
-          class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-900 group transition duration-500">
-          <svg class="text-gray-500 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
-            viewBox="0 0 14 14">
-            <g fill="none">
-              <g clip-path="url(#primeTwitter0)">
-                <path fill="currentColor"
-                  d="M11.025.656h2.147L8.482 6.03L14 13.344H9.68L6.294 8.909l-3.87 4.435H.275l5.016-5.75L0 .657h4.43L7.486 4.71zm-.755 11.4h1.19L3.78 1.877H2.504z" />
-              </g>
-              <defs>
-                <clipPath id="primeTwitter0">
-                  <path fill="#fff" d="M0 0h14v14H0z" />
-                </clipPath>
-              </defs>
-            </g>
-          </svg>
-        </a>
-      </div>
-    </div>
-    <div class="container mx-auto px-6 text-center space-y-6">
-      <!-- Logo & Description -->
-      <div class="text-gray-600 max-w-2xl mx-auto">
-        <img src="../public/assets/Sidnov-Logo.png" alt="SIDNOV INDONESIA" class="mx-auto mb-4 w-20">
-        <p class="text-sm">
-          Handmade Bags with a Cultural Touch!
-        </p>
-      </div>
+        <div class="p-4">
+          <!-- Mobile Search -->
+          <div class="relative mb-4">
+            <div class="absolute inset-y-0 start-0 flex items-center ps-3.5">
+              <svg class="size-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </div>
+            <input type="search" name="search" class="py-2 ps-10 pe-4 block w-full border border-gray-200 text-sm focus:border-gray-500 focus:ring-gray-500" placeholder="Find your perfect bag.." />
+          </div>
 
-      <!-- Quick Links -->
-      <div>
-        <h3 class="text-lg font-semibold text-gray-800">Quick Links</h3>
-        <div class="flex justify-center space-x-6 mt-4">
-          <a href="index.html" class="text-gray-600 hover:text-gray-900 transition">Home</a>
-          <a href="pages/shop.html" class="text-gray-600 hover:text-gray-900 transition">Shop</a>
-          <a href="pages/stories.html" class="text-gray-600 hover:text-gray-900 transition">Stories</a>
-          <a href="#" class="text-gray-600 hover:text-gray-900 transition">About</a>
+          <!-- Mobile Nav Links -->
+          <div class="space-y-2">
+            <a href="index.html" class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">HOME</a>
+            <a href="pages/shop.html" class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">SHOP</a>
+            <a href="pages/stories.html" class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">STORIES</a>
+            <a href="#" class="block p-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg">ABOUT</a>
+          </div>
+
+          <!-- Mobile Auth -->
+          <div class="flex items-center gap-2 pt-4 mt-4 border-t border-gray-200">
+            <a href="/src/pages/signin.html" class="text-sm text-gray-800">Sign in</a>
+            <span class="text-gray-300">/</span>
+            <a href="/src/pages/signup.html" class="text-sm text-gray-500">Sign up</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section>
+      <div class="container mx-auto lg:px-12 px-4 pt-8 lg:h-screen">
+        <div class="grid grid-cols-12 justify-center items-center gap-5">
+          <!-- Laptop Bag -->
+          <div class="col-span-12 lg:col-span-7 relative group">
+            <img src="../public/assets/laptop_bag.webp" alt="Laptop Bag" class="object-cover w-full h-full" />
+            <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex gap-4 flex-col items-center justify-center text-white p-4">
+              <h2 class="text-x md:text-3xl font-title">Laptop Bags</h2>
+              <p class="text-xs lg:text-base text-center lg:w-9/12">Style Meets Functionality! Stay stylish and organized with our exclusive laptop bags, crafted for durability and elegance.</p>
+              <button class="px-8 py-2 border border-white text-white hover:bg-white hover:text-black transition">Explore Collection</button>
+            </div>
+          </div>
+          <!-- Square Bags -->
+          <div class="col-span-12 lg:col-span-5 flex flex-col md:flex-row lg:flex-col gap-5">
+            <div class="relative group w-full md:w-1/2 lg:w-full">
+              <img src="../public/assets/tote_bag.webp" alt="Square Bag" class="object-cover w-full h-full" />
+              <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex gap-4 flex-col items-center justify-center text-white p-4">
+                <h2 class="text-xl md:text-3xl font-title">Tote Bags</h2>
+                <p class="text-xs lg:text-base text-center lg:w-9/12">Compact & Practical! Sleek, lightweight, and versatile—your perfect everyday companion.</p>
+                <button class="px-8 py-2 border border-white text-white hover:bg-white hover:text-black transition">Explore Collection</button>
+              </div>
+            </div>
+            <div class="relative group w-full md:w-1/2 lg:w-full">
+              <img src="../public/assets/square_bag.webp" alt="Tote Bag" class="object-cover w-full h-full" />
+              <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition duration-300 flex gap-4 flex-col items-center justify-center text-white p-4">
+                <h2 class="text-xl md:text-3xl font-title">Square Bags</h2>
+                <p class="text-xs lg:text-base text-center lg:w-9/12">Stylish & Spacious! Chic, comfortable, and designed for any occasion.</p>
+                <button class="px-8 py-2 border border-white text-white hover:bg-white hover:text-black transition">Explore Collection</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- HERO SECTION END -->
+
+    <!-- NEW PRODUCT SECTION -->
+    <section>
+      <div class="container mx-auto lg:px-12 px-4 mt-24 md:mt-12 pb-28">
+        <div class="flex flex-col gap-10 lg:gap-16">
+          <div class="title flex gap-y-4 flex-col md:flex-row justify-between items-center w-full">
+            <h1 class="text-2xl md:text-4xl font-extrabold">New Arrivals – Fresh & Exclusive!</h1>
+            <div class="flex flex-wrap text-xs lg:text-lg text-gray-500 font-medium gap-6 lg:gap-12 justify-center gap-y-4 cursor-pointer">
+              <span class="text-gray-800 underline" data-filter="all">All</span>
+              <span data-filter=".square_bag">Square Bag</span>
+              <span data-filter=".tote_bag">Tote Bag</span>
+              <span data-filter=".laptop_bag">Laptop Bag</span>
+              <span data-filter=".accessories">Accessories</span>
+            </div>
+          </div>
+
+          <div class="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-5 gap-y-12 xl:gap-x-8" id="product_container">
+            <div class="group relative overflow-hidden rounded-md product-card square_bag">
+              <div class="w-full aspect-square bg-gray-200 rounded-md overflow-hidden">
+                <img src="../public/assets/new_product_1.webp" alt="Front of men's Basic Tee in black." class="object-cover w-full h-full transition duration-500 transform group-hover:scale-[1.2]" />
+              </div>
+              <div class="mt-6 flex gap-6 flex-col justify-between">
+                <div>
+                  <h3 class="text-xs md:text-lg lg:text-2xl font-extrabold text-gray-800">
+                    <a href="#" class="line-clamp-2 group-hover:line-clamp-none">
+                      <span aria-hidden="true" class="absolute inset-0"></span>
+                      Square Bag - "Floral Breeze" Edition
+                    </a>
+                  </h3>
+                  <p class="mt-2 text-base md:text-lg font-semibold text-gray-800">Rp 245.000</p>
+                </div>
+                <div class="group-btn flex gap-2 md:gap-4 transition duration-500">
+                  <a
+                    href="#"
+                    class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-emerald-400"
+                  >
+                    <span class="icon-[solar--bag-4-outline] text-3xl"></span>
+                  </a>
+                  <a
+                    href="/src/pages/detail-product.html"
+                    class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-sky-400"
+                  >
+                    <span class="icon-[solar--eye-outline] text-3xl"></span>
+                  </a>
+                  <a href="#" class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-red-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-red-400">
+                    <span class="icon-[solar--heart-outline] text-3xl"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="group relative overflow-hidden rounded-md product-card square_bag">
+              <div class="w-full aspect-square bg-gray-200 rounded-md overflow-hidden">
+                <img src="../public/assets/new_product_5.webp" alt="Front of men's Basic Tee in black." class="object-cover w-full h-full transition duration-500 transform group-hover:scale-[1.2]" />
+              </div>
+              <div class="mt-6 flex gap-6 flex-col justify-between">
+                <div>
+                  <h3 class="text-xs md:text-lg lg:text-2xl font-extrabold text-gray-800">
+                    <a href="#" class="line-clamp-2 group-hover:line-clamp-none">
+                      <span aria-hidden="true" class="absolute inset-0"></span>
+                      Square Bag - "Abstract Harmony" Pattern
+                    </a>
+                  </h3>
+                  <p class="mt-2 text-base md:text-lg font-semibold text-gray-800">Rp 280.000</p>
+                </div>
+                <div class="group-btn flex gap-2 md:gap-4 transition duration-500">
+                  <a
+                    href="#"
+                    class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-emerald-400"
+                  >
+                    <span class="icon-[solar--bag-4-outline] text-3xl"></span>
+                  </a>
+                  <a
+                    href="/src/pages/detail-product.html"
+                    class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-sky-400"
+                  >
+                    <span class="icon-[solar--eye-outline] text-3xl"></span>
+                  </a>
+                  <a href="#" class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-red-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-red-400">
+                    <span class="icon-[solar--heart-outline] text-3xl"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="group relative overflow-hidden rounded-md product-card laptop_bag">
+              <div class="w-full aspect-square bg-gray-200 rounded-md overflow-hidden">
+                <img src="../public/assets/new_product_3.webp" alt="Front of men's Basic Tee in black." class="object-cover w-full h-full transition duration-500 transform group-hover:scale-[1.2]" />
+              </div>
+              <div class="mt-6 flex gap-6 flex-col justify-between">
+                <div>
+                  <h3 class="text-xs md:text-lg lg:text-2xl font-extrabold text-gray-800">
+                    <a href="#" class="line-clamp-2 group-hover:line-clamp-none">
+                      <span aria-hidden="true" class="absolute inset-0"></span>
+                      Laptop Bag - "Orca whale" Pattern
+                    </a>
+                  </h3>
+                  <p class="mt-2 text-base md:text-lg font-semibold text-gray-800">Rp 250.000</p>
+                </div>
+                <div class="group-btn flex gap-2 md:gap-4 transition duration-500">
+                  <a
+                    href="#"
+                    class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-emerald-400"
+                  >
+                    <span class="icon-[solar--bag-4-outline] text-3xl"></span>
+                  </a>
+                  <a
+                    href="/src/pages/detail-product.html"
+                    class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-sky-400"
+                  >
+                    <span class="icon-[solar--eye-outline] text-3xl"></span>
+                  </a>
+                  <a href="#" class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-red-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-red-400">
+                    <span class="icon-[solar--heart-outline] text-3xl"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="group relative overflow-hidden rounded-md product-card laptop_bag">
+              <div class="w-full aspect-square bg-gray-200 rounded-md overflow-hidden">
+                <img src="../public/assets/new_product_7.webp" alt="Front of men's Basic Tee in black." class="object-cover w-full h-full transition duration-500 transform group-hover:scale-[1.2]" />
+              </div>
+              <div class="mt-6 flex gap-6 flex-col justify-between">
+                <div>
+                  <h3 class="text-xs md:text-lg lg:text-2xl font-extrabold text-gray-800">
+                    <a href="#" class="line-clamp-2 group-hover:line-clamp-none">
+                      <span aria-hidden="true" class="absolute inset-0"></span>
+                      Laptop Bag - "Elegant Noir" Pattern
+                    </a>
+                  </h3>
+                  <p class="mt-2 text-base md:text-lg font-semibold text-gray-800">Rp 265.000</p>
+                </div>
+                <div class="group-btn flex gap-2 md:gap-4 transition duration-500">
+                  <a
+                    href="#"
+                    class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-emerald-400"
+                  >
+                    <span class="icon-[solar--bag-4-outline] text-3xl"></span>
+                  </a>
+                  <a
+                    href="/src/pages/detail-product.html"
+                    class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-sky-400"
+                  >
+                    <span class="icon-[solar--eye-outline] text-3xl"></span>
+                  </a>
+                  <a href="#" class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-red-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-red-400">
+                    <span class="icon-[solar--heart-outline] text-3xl"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="group relative overflow-hidden rounded-md product-card accessories">
+              <div class="w-full aspect-square bg-gray-200 rounded-md overflow-hidden">
+                <img src="../public/assets/new_product_4.webp" alt="Front of men's Basic Tee in black." class="object-cover w-full h-full transition duration-500 transform group-hover:scale-[1.2]" />
+              </div>
+              <div class="mt-6 flex gap-6 flex-col justify-between">
+                <div>
+                  <h3 class="text-xs md:text-lg lg:text-2xl font-extrabold text-gray-800">
+                    <a href="#" class="line-clamp-2 group-hover:line-clamp-none">
+                      <span aria-hidden="true" class="absolute inset-0"></span>
+                      SIDNOV Charm Bag - "Geometric Sunset Glow" Edition
+                    </a>
+                  </h3>
+                  <p class="mt-2 text-base md:text-lg font-semibold text-gray-800">Rp 230.000</p>
+                </div>
+                <div class="group-btn flex gap-2 md:gap-4 transition duration-500">
+                  <a
+                    href="#"
+                    class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-emerald-400"
+                  >
+                    <span class="icon-[solar--bag-4-outline] text-3xl"></span>
+                  </a>
+                  <a
+                    href="/src/pages/detail-product.html"
+                    class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-sky-400"
+                  >
+                    <span class="icon-[solar--eye-outline] text-3xl"></span>
+                  </a>
+                  <a href="#" class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-red-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-red-400">
+                    <span class="icon-[solar--heart-outline] text-3xl"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="group relative overflow-hidden rounded-md product-card tote_bag">
+              <div class="w-full aspect-square bg-gray-200 rounded-md overflow-hidden">
+                <img src="../public/assets/new_product_6.webp" alt="Front of men's Basic Tee in black." class="object-cover w-full h-full transition duration-500 transform group-hover:scale-[1.2]" />
+              </div>
+              <div class="mt-6 flex gap-6 flex-col justify-between">
+                <div>
+                  <h3 class="text-xs md:text-lg lg:text-2xl font-extrabold text-gray-800">
+                    <a href="#" class="line-clamp-2 group-hover:line-clamp-none">
+                      <span aria-hidden="true" class="absolute inset-0"></span>
+                      Tote Bag - "Nature Vibes"
+                    </a>
+                  </h3>
+                  <p class="mt-2 text-base md:text-lg font-semibold text-gray-800">Rp 215.000</p>
+                </div>
+                <div class="group-btn flex gap-2 md:gap-4 transition duration-500">
+                  <a
+                    href="#"
+                    class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-emerald-400"
+                  >
+                    <span class="icon-[solar--bag-4-outline] text-3xl"></span>
+                  </a>
+                  <a
+                    href="/src/pages/detail-product.html"
+                    class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-sky-400"
+                  >
+                    <span class="icon-[solar--eye-outline] text-3xl"></span>
+                  </a>
+                  <a href="#" class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-red-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-red-400">
+                    <span class="icon-[solar--heart-outline] text-3xl"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="group relative overflow-hidden rounded-md product-card tote_bag">
+              <div class="w-full aspect-square bg-gray-200 rounded-md overflow-hidden">
+                <img src="../public/assets/new_product_2.webp" alt="Front of men's Basic Tee in black." class="object-cover w-full h-full transition duration-500 transform group-hover:scale-[1.2]" />
+              </div>
+              <div class="mt-6 flex gap-6 flex-col justify-between">
+                <div>
+                  <h3 class="text-xs md:text-lg lg:text-2xl font-extrabold text-gray-800">
+                    <a href="#" class="line-clamp-2 group-hover:line-clamp-none">
+                      <span aria-hidden="true" class="absolute inset-0"></span>
+                      Tote Bag - "Geometric Bliss" Design
+                    </a>
+                  </h3>
+                  <p class="mt-2 text-base md:text-lg font-semibold text-gray-800">Rp 210.000</p>
+                </div>
+                <div class="group-btn flex gap-2 md:gap-4 transition duration-500">
+                  <a
+                    href="#"
+                    class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-emerald-400"
+                  >
+                    <span class="icon-[solar--bag-4-outline] text-3xl"></span>
+                  </a>
+                  <a
+                    href="/src/pages/detail-product.html"
+                    class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-sky-400"
+                  >
+                    <span class="icon-[solar--eye-outline] text-3xl"></span>
+                  </a>
+                  <a href="#" class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-red-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-red-400">
+                    <span class="icon-[solar--heart-outline] text-3xl"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="group relative overflow-hidden rounded-md product-card accessories">
+              <div class="w-full aspect-square bg-gray-200 rounded-md overflow-hidden">
+                <img src="../public/assets/new_product_8.webp" alt="Front of men's Basic Tee in black." class="object-cover w-full h-full transition duration-500 transform group-hover:scale-[1.2]" />
+              </div>
+              <div class="mt-6 flex gap-6 flex-col justify-between">
+                <div>
+                  <h3 class="text-xs md:text-lg lg:text-2xl font-extrabold text-gray-800">
+                    <a href="#" class="line-clamp-2 group-hover:line-clamp-none">
+                      <span aria-hidden="true" class="absolute inset-0"></span>
+                      SIDNOV Charm Bag V2 - "Geometric Sunset Glow" Edition
+                    </a>
+                  </h3>
+                  <p class="mt-2 text-base md:text-lg font-semibold text-gray-800">Rp 249.000</p>
+                </div>
+                <div class="group-btn flex gap-2 md:gap-4 transition duration-500">
+                  <a
+                    href="#"
+                    class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-emerald-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-emerald-400"
+                  >
+                    <span class="icon-[solar--bag-4-outline] text-3xl"></span>
+                  </a>
+                  <a
+                    href="/src/pages/detail-product.html"
+                    class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-sky-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-sky-400"
+                  >
+                    <span class="icon-[solar--eye-outline] text-3xl"></span>
+                  </a>
+                  <a href="#" class="w-8 h-8 md:w-12 md:h-12 p-2 md:p-3 bg-red-300 text-white rounded-3xl justify-center items-center inline-flex overflow-hidden transform transition duration-500 hover:rotate-[360deg] hover:bg-red-400">
+                    <span class="icon-[solar--heart-outline] text-3xl"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- NEW PRODUCT SECTION END-->
+
+    <!-- Banner Carousel -->
+    <div id="banner-carousel" class="relative h-[380px] w-full overflow-hidden">
+      <!-- Carousel Images -->
+      <div class="carousel-images relative h-full w-full">
+        <div class="carousel-item absolute inset-0 transition-opacity duration-500 ease-in-out opacity-100" data-index="0">
+          <img src="../public/assets/banner_slider_1.webp" class="w-full h-full object-cover" alt="Banner Slide 1" />
+          <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <div class="text-center text-white px-4 sm:px-6 md:px-8 lg:px-12 w-9/12 lg:w-1/2 flex flex-col gap-4 items-center">
+              <h5 class="text-base sm:text-lg md:text-xl lg:text-4xl mb-2 font-title leading-relaxed">Special Offer for Chinese New Year Edition</h5>
+              <p class="text-xs sm:text-sm md:text-base lg:text-lg">
+                Get your favorite bag at a special discount, only for a limited time! 👜 Limited-edition cultural designs! 🎁 Exclusive deals on selected items! 🚀 Fast & secure shipping!
+              </p>
+              <button class="px-8 py-2 border border-white text-white hover:bg-white hover:text-black transition w-max">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0" data-index="1">
+          <img src="../public/assets/banner_slider_2.webp" class="w-full h-full object-cover" alt="Banner Slide 2" />
+          <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <div class="text-center text-white px-4 sm:px-6 md:px-8 lg:px-12 w-9/12 lg:w-1/2 flex flex-col gap-4 items-center">
+              <h5 class="text-base sm:text-lg md:text-xl lg:text-4xl mb-2 font-title leading-relaxed">Limited-Time New Year Offer!</h5>
+              <p class="text-xs sm:text-sm md:text-base lg:text-lg">
+                Get your hands on our best-selling bags before they’re gone! 👜 Handmade cultural-inspired bags 🔥 Exclusive festive discounts – while stocks last! 🚀 Fast shipping – Get yours before the celebration begins! 🎯 Hurry, once
+                they're gone, they're gone!
+              </p>
+              <button class="px-8 py-2 border border-white text-white hover:bg-white hover:text-black transition w-max">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item absolute inset-0 transition-opacity duration-500 ease-in-out opacity-0" data-index="2">
+          <img src="../public/assets/banner_slider_3.webp" class="w-full h-full object-cover" alt="Banner Slide 3" />
+          <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <div class="text-center text-white px-4 sm:px-6 md:px-8 lg:px-12 w-9/12 lg:w-1/2 flex flex-col gap-4 items-center">
+              <h5 class="text-base sm:text-lg md:text-xl lg:text-4xl mb-2 font-title leading-relaxed">Lunar New Year Special – Celebrate in Style!</h5>
+              <p class="text-xs sm:text-sm md:text-base lg:text-lg">
+                Ring in the new year with an exclusive collection of beautifully handcrafted bags! ✨ Limited-edition festive designs 💰 Special discounts on selected items 📦 Fast & secure delivery to your doorstep
+              </p>
+              <button class="px-8 py-2 border border-white text-white hover:bg-white hover:text-black transition w-max">Buy Now</button>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Copyright -->
-      <div class="border-t border-gray-300 pt-6 text-gray-500 text-sm font-medium">
-        Copyright © 2025 All rights reserved | <a href="#" class="hover:font-bold hover:text-gray-800">SIDNOV
-          INDONESIA</a><br>Made by <a href="https://github.com/fe-husni"
-          class="hover:font-bold hover:text-gray-800">HM</a> & <a href="https://github.com/adenafil"
-          class="hover:font-bold hover:text-gray-800">ANF</a>
+      <!-- Carousel Indicators -->
+      <div class="absolute bottom-0 left-0 right-0 z-10 flex justify-center pb-4 space-x-2">
+        <button class="carousel-indicator h-1 rounded-full bg-white/50 transition-all duration-300 ease-in-out" data-index="0" style="width: 30px"></button>
+        <button class="carousel-indicator h-1 rounded-full bg-white/50 transition-all duration-300 ease-in-out" data-index="1" style="width: 10px"></button>
+        <button class="carousel-indicator h-1 rounded-full bg-white/50 transition-all duration-300 ease-in-out" data-index="2" style="width: 10px"></button>
       </div>
 
+      <!-- Carousel Controls -->
+      <button id="prev-slide" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/20 hover:bg-white/40 p-2 rounded-full transition">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+        </svg>
+      </button>
+      <button id="next-slide" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/20 hover:bg-white/40 p-2 rounded-full transition">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>
+      </button>
     </div>
-  </footer>
 
-  <!-- FOOTER END-->
+    <!-- ABOUT -->
+    <section>
+      <div class="container mx-auto lg:px-12 px-4 mt-24 md:mt-12 pt-20 pb-28">
+        <div class="flex flex-col lg:grid lg:grid-cols-12 gap-x-10 gap-y-6 items-center">
+          <div class="w-full h-full lg:col-span-5">
+            <img src="../public/assets/about-home-img.png" alt="about-sidnov" class="object-cover w-full h-full" />
+          </div>
+          <div class="w-full flex flex-col gap-4 lg:col-span-7 text-center lg:text-left">
+            <h1 class="text-2xl md:text-[40px] text-gray-800 font-extrabold leading-normal">#sidnovindonesia<br />UNIQUE FASHIONABLE</h1>
+            <p class="text-sm md:text-xl text-gray-800 font-normal">
+              We bring you high-quality handmade bags inspired by Indonesian culture with a modern twist. Premium materials & eco-friendly craftsmanship, exclusive ethnic patterns, 🇮🇩 locally made with international appeal
+            </p>
+            <button class="px-8 py-2 border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition w-max mx-auto lg:mx-0">Read Our Story</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ABOUT END -->
 
+    <!-- FOOTER -->
+    <footer class="w-full bg-white border-gray-300 py-10">
+      <!-- Social Media Icons -->
+      <div class="text-center border-t border-b border-gray-300 py-6">
+        <h3 class="text-lg font-semibold text-gray-800">Follow Us</h3>
+        <div class="flex justify-center space-x-4 mt-4">
+          <a href="#" class="relative w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 overflow-hidden group">
+            <span class="absolute inset-0 bg-gradient-to-bl from-[#AE16D0] to-[#FEA91A] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
+            <svg class="relative z-10 text-gray-500 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M12 7.9a4.1 4.1 0 1 0 4.1 4.1A4.09 4.09 0 0 0 12 7.9m0 6.77A2.67 2.67 0 1 1 14.67 12A2.67 2.67 0 0 1 12 14.67m5.23-6.94a1 1 0 1 1-1-1a1 1 0 0 1 1 1m2.71 1a4.7 4.7 0 0 0-1.29-3.35a4.7 4.7 0 0 0-3.35-1.32C14 4 10 4 8.7 4.06a4.73 4.73 0 0 0-3.35 1.29A4.7 4.7 0 0 0 4.06 8.7C4 10 4 14 4.06 15.3a4.7 4.7 0 0 0 1.29 3.35a4.73 4.73 0 0 0 3.35 1.29c1.32.08 5.28.08 6.6 0a4.7 4.7 0 0 0 3.35-1.29a4.7 4.7 0 0 0 1.29-3.35c.06-1.3.06-5.3 0-6.6Zm-1.7 8a2.7 2.7 0 0 1-1.52 1.52a18 18 0 0 1-4.72.32a18 18 0 0 1-4.71-.32a2.7 2.7 0 0 1-1.52-1.52c-.42-1.06-.33-3.56-.33-4.72s-.09-3.67.33-4.72a2.65 2.65 0 0 1 1.52-1.53A18 18 0 0 1 12 5.44a18 18 0 0 1 4.72.32a2.7 2.7 0 0 1 1.52 1.52c.42 1.06.32 3.56.32 4.72s.1 3.67-.32 4.72Z"
+              />
+            </svg>
+          </a>
+          <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-900 group transition duration-500">
+            <svg class="text-gray-500 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M19 10.56a6.57 6.57 0 0 1-3.838-1.229v5.588a5.082 5.082 0 1 1-4.38-5.035v2.81a2.33 2.33 0 1 0 1.63 2.225V4h2.75q-.002.35.06.694A3.82 3.82 0 0 0 16.906 7.2c.621.41 1.35.629 2.094.628z" />
+            </svg>
+          </a>
+          <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 hover:bg-red-600 group transition duration-500">
+            <svg class="text-gray-500 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <g fill="none" stroke="currentColor" stroke-width="1.5">
+                <path fill="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m14 12l-3.5 2v-4z" />
+                <path
+                  d="M2 12.708v-1.416c0-2.895 0-4.343.905-5.274c.906-.932 2.332-.972 5.183-1.053C9.438 4.927 10.818 4.9 12 4.9s2.561.027 3.912.065c2.851.081 4.277.121 5.182 1.053S22 8.398 22 11.292v1.415c0 2.896 0 4.343-.905 5.275c-.906.931-2.331.972-5.183 1.052c-1.35.039-2.73.066-3.912.066s-2.561-.027-3.912-.066c-2.851-.08-4.277-.12-5.183-1.052S2 15.602 2 12.708Z"
+                />
+              </g>
+            </svg>
+          </a>
+          <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-900 group transition duration-500">
+            <svg class="text-gray-500 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+              <g fill="none">
+                <g clip-path="url(#primeTwitter0)">
+                  <path fill="currentColor" d="M11.025.656h2.147L8.482 6.03L14 13.344H9.68L6.294 8.909l-3.87 4.435H.275l5.016-5.75L0 .657h4.43L7.486 4.71zm-.755 11.4h1.19L3.78 1.877H2.504z" />
+                </g>
+                <defs>
+                  <clipPath id="primeTwitter0">
+                    <path fill="#fff" d="M0 0h14v14H0z" />
+                  </clipPath>
+                </defs>
+              </g>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="container mx-auto px-6 text-center space-y-6">
+        <!-- Logo & Description -->
+        <div class="text-gray-600 max-w-2xl mx-auto">
+          <img src="../public/assets/Sidnov-Logo.png" alt="SIDNOV INDONESIA" class="mx-auto mb-4 w-20" />
+          <p class="text-sm">Handmade Bags with a Cultural Touch!</p>
+        </div>
 
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800">Quick Links</h3>
+          <div class="flex justify-center space-x-6 mt-4">
+            <a href="index.html" class="text-gray-600 hover:text-gray-900 transition">Home</a>
+            <a href="pages/shop.html" class="text-gray-600 hover:text-gray-900 transition">Shop</a>
+            <a href="pages/stories.html" class="text-gray-600 hover:text-gray-900 transition">Stories</a>
+            <a href="#" class="text-gray-600 hover:text-gray-900 transition">About</a>
+          </div>
+        </div>
 
-  <script>
-    /*=============== MIXITUP FILTER PRODUCT ===============*/
-    document.addEventListener("DOMContentLoaded", function () {
-      let mixProduct = mixitup('#product_container', {
-        selectors: {
-          target: '.product-card'
-        },
-        animation: {
-          duration: 500
+        <!-- Copyright -->
+        <div class="border-t border-gray-300 pt-6 text-gray-500 text-sm font-medium">
+          Copyright © 2025 All rights reserved | <a href="#" class="hover:font-bold hover:text-gray-800">SIDNOV INDONESIA</a><br />Made by <a href="https://github.com/fe-husni" class="hover:font-bold hover:text-gray-800">HM</a> &
+          <a href="https://github.com/adenafil" class="hover:font-bold hover:text-gray-800">ANF</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- FOOTER END-->
+
+    <script>
+      /*=============== MIXITUP FILTER PRODUCT ===============*/
+      document.addEventListener("DOMContentLoaded", function () {
+        let mixProduct = mixitup("#product_container", {
+          selectors: {
+            target: ".product-card",
+          },
+          animation: {
+            duration: 500,
+          },
+        });
+
+        // Menambahkan event listener ke tombol filter
+        document.querySelectorAll("[data-filter]").forEach((filterBtn) => {
+          filterBtn.addEventListener("click", function () {
+            document.querySelectorAll("[data-filter]").forEach((btn) => btn.classList.remove("text-gray-800", "underline", "font-bold"));
+            this.classList.add("text-gray-800", "underline", "font-bold");
+          });
+        });
+      });
+
+      /*=============== BANNER CAROUSEL ===============*/
+      document.addEventListener("DOMContentLoaded", () => {
+        const carousel = document.getElementById("banner-carousel");
+        const carouselItems = carousel.querySelectorAll(".carousel-item");
+        const indicators = carousel.querySelectorAll(".carousel-indicator");
+        const prevButton = document.getElementById("prev-slide");
+        const nextButton = document.getElementById("next-slide");
+
+        let currentSlide = 0;
+        const totalSlides = carouselItems.length;
+
+        function showSlide(index) {
+          // Hide all slides
+          carouselItems.forEach((item) => {
+            item.classList.remove("opacity-100");
+            item.classList.add("opacity-0");
+          });
+
+          // Show current slide
+          carouselItems[index].classList.remove("opacity-0");
+          carouselItems[index].classList.add("opacity-100");
+
+          // Update indicators
+          indicators.forEach((indicator) => {
+            indicator.style.width = "10px";
+            indicator.classList.remove("bg-white");
+            indicator.classList.add("bg-white/50");
+          });
+          indicators[index].style.width = "30px";
+          indicators[index].classList.remove("bg-white/50");
+          indicators[index].classList.add("bg-white");
         }
-      });
 
-      // Menambahkan event listener ke tombol filter
-      document.querySelectorAll('[data-filter]').forEach(filterBtn => {
-        filterBtn.addEventListener('click', function () {
-          document.querySelectorAll('[data-filter]').forEach(btn => btn.classList.remove('text-gray-800', 'underline', 'font-bold'));
-          this.classList.add('text-gray-800', 'underline', 'font-bold');
-        });
-      });
-    });
-
-
-    /*=============== BANNER CAROUSEL ===============*/
-    document.addEventListener('DOMContentLoaded', () => {
-      const carousel = document.getElementById('banner-carousel');
-      const carouselItems = carousel.querySelectorAll('.carousel-item');
-      const indicators = carousel.querySelectorAll('.carousel-indicator');
-      const prevButton = document.getElementById('prev-slide');
-      const nextButton = document.getElementById('next-slide');
-
-      let currentSlide = 0;
-      const totalSlides = carouselItems.length;
-
-      function showSlide(index) {
-        // Hide all slides
-        carouselItems.forEach(item => {
-          item.classList.remove('opacity-100');
-          item.classList.add('opacity-0');
-        });
-
-        // Show current slide
-        carouselItems[index].classList.remove('opacity-0');
-        carouselItems[index].classList.add('opacity-100');
-
-        // Update indicators
-        indicators.forEach(indicator => {
-          indicator.style.width = '10px';
-          indicator.classList.remove('bg-white');
-          indicator.classList.add('bg-white/50');
-        });
-        indicators[index].style.width = '30px';
-        indicators[index].classList.remove('bg-white/50');
-        indicators[index].classList.add('bg-white');
-      }
-
-      function nextSlide() {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        showSlide(currentSlide);
-      }
-
-      function prevSlide() {
-        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-        showSlide(currentSlide);
-      }
-
-      // Auto slide every 5 seconds
-      let autoSlideInterval = setInterval(nextSlide, 5000);
-
-      // Event listeners for manual navigation
-      nextButton.addEventListener('click', () => {
-        clearInterval(autoSlideInterval);
-        nextSlide();
-        autoSlideInterval = setInterval(nextSlide, 5000);
-      });
-
-      prevButton.addEventListener('click', () => {
-        clearInterval(autoSlideInterval);
-        prevSlide();
-        autoSlideInterval = setInterval(nextSlide, 5000);
-      });
-
-      // Indicator click events
-      indicators.forEach(indicator => {
-        indicator.addEventListener('click', () => {
-          clearInterval(autoSlideInterval);
-          const index = parseInt(indicator.getAttribute('data-index'));
-          currentSlide = index;
+        function nextSlide() {
+          currentSlide = (currentSlide + 1) % totalSlides;
           showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+          currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+          showSlide(currentSlide);
+        }
+
+        // Auto slide every 5 seconds
+        let autoSlideInterval = setInterval(nextSlide, 5000);
+
+        // Event listeners for manual navigation
+        nextButton.addEventListener("click", () => {
+          clearInterval(autoSlideInterval);
+          nextSlide();
           autoSlideInterval = setInterval(nextSlide, 5000);
         });
+
+        prevButton.addEventListener("click", () => {
+          clearInterval(autoSlideInterval);
+          prevSlide();
+          autoSlideInterval = setInterval(nextSlide, 5000);
+        });
+
+        // Indicator click events
+        indicators.forEach((indicator) => {
+          indicator.addEventListener("click", () => {
+            clearInterval(autoSlideInterval);
+            const index = parseInt(indicator.getAttribute("data-index"));
+            currentSlide = index;
+            showSlide(currentSlide);
+            autoSlideInterval = setInterval(nextSlide, 5000);
+          });
+        });
       });
-    });
-  </script>
 
-  <!-- Preline Library -->
-  <script src="../public/js/preline.js"></script>
+      // Dropdown menu profile
+      const trigger = document.getElementById("name-trigger");
+      const dropdown = document.getElementById("name-dropdown");
+      const bottomName = document.querySelector(".bottom-name");
 
-  <!-- Mixitup V3 Library -->
-  <script src="../public/js/mixitup.min.js"></script>
+      // Toggle dropdown saat trigger di-click
+      trigger.addEventListener("click", () => {
+        dropdown.classList.toggle("hidden");
+        bottomName.classList.toggle("hidden");
+        
+      });
 
-</body>
+      trigger.addEventListener("mouseenter", () => {
+        dropdown.classList.toggle("hidden");
+        bottomName.classList.toggle("hidden");
+      });
 
+
+      // Sembunyikan dropdown saat kursor meninggalkan area dropdown
+      dropdown.addEventListener("mouseleave", () => {
+        dropdown.classList.add("hidden");
+        bottomName.classList.add("hidden");
+
+      });
+    </script>
+
+    <!-- Preline Library -->
+    <script src="../public/js/preline.js"></script>
+
+    <!-- Mixitup V3 Library -->
+    <script src="../public/js/mixitup.min.js"></script>
+  </body>
 </html>
